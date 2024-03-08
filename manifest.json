@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "<name in manifest.json>",
-  "description": "<description in manifest.json>",
+  "version": "0.0.1",
+  "name": "youtube-dj",
+  "description": "An alternative music player for open YouTube tabs.",
   "options_ui": {
     "page": "src/pages/options/index.html"
   },
@@ -19,17 +20,18 @@
     "newtab": "src/pages/newtab/index.html"
   },
   "icons": {
+    "32": "icon-32.png",
     "128": "icon-128.png"
   },
   "permissions": [
+    "tabs",
     "activeTab"
   ],
   "content_scripts": [
     {
+      "run_at": "document_start",
       "matches": [
-        "http://*/*",
-        "https://*/*",
-        "<all_urls>"
+        "*://www.youtube.com/*"
       ],
       "js": [
         "src/pages/content/index.tsx"
@@ -39,6 +41,7 @@
       ]
     }
   ],
+  "options_page": "src/pages/options/index.html",
   "devtools_page": "src/pages/devtools/index.html",
   "web_accessible_resources": [
     {
