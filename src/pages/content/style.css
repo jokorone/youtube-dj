@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.langin{
-    color: aliceblue;
+
+#youtube-dj-container, * {
+    color: var(--light-theme-text-color) !important;
+}
+@media (prefers-color-scheme: dark) {
+    #youtube-dj-container, *{
+        color: var(--dark-theme-text-color) !important;
+    }
 }

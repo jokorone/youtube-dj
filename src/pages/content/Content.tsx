@@ -1,8 +1,22 @@
+import React from "react";
+import Slider from "./../../components/Slider";
 
-function Content(): JSX.Element {
+
+function Content(props: {
+  video: HTMLVideoElement,
+}): JSX.Element {
   console.log("Injected Content")
-  return <div className='absolute bottom-4 left-4 text-lg text-black bg-[#2cb] z-50'  >
-    Content
+  console.log(globalThis);
+
+  const [msg, setMsg] = React.useState("");
+
+  React.useEffect(() => {
+    chrome.runtime.sendMessage({ msg }, (res) => {
+      console.log(res.answer);
+    })
+  }, [msg])
+
+  return <div className="my-2 lg-my-4">
   </div>
 }
 
