@@ -1,47 +1,37 @@
-<div align="center">
-<img src="public/icon-128.png" alt="logo"/>
-<h1> Chrome Extension Boilerplate with<br/>React + Vite + TypeScript + TailwindCSS</h1>
+https://github.com/JohnBra/vite-web-extension is used to kickstart project boilerplate.
 
-<h5>
-This is a side product of my Chrome Extension <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/supatabs/icbcnjlaegndjabnjbaeihnnmidbfigk">Supatabs</a>.
-Supatabs is a 🔥🔥 BLAZINGLY FAST 🔥🔥 free alternative to OneTab with support for chrome tab groups and searching through tabs.
-</h5>
 
-<h5>
-If you tend to have thousands of tabs open, are a OneTab user, or use any other tab manager 
-make sure to check it out <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/supatabs/icbcnjlaegndjabnjbaeihnnmidbfigk">here</a>!
-</h5>
-
-</div>
+## Todo
+- create popup for monitoring open youtube tabs with shortcuts
+- implement youtube-dl for mp3 file
+  - [node-ytdl-core](https://github.com/fent/node-ytdl-core?tab=readme-ov-file#usage)?
+  - check out [useStorage.tsx](https://gist.github.com/JohnBra/c81451ea7bc9e77f8021beb4f198ab96) by boilerplate maintainer for storing files (research download option)
+- read bpm & key using [realtime-bpm-analyzer](https://github.com/dlepaux/realtime-bpm-analyzer?tab=readme-ov-file#getting-started)
+- remove new tab unless it shows all features with import via link and actual dj decks
 
 ## Table of Contents
+
+
 
 - [Intro](#intro)
 - [Why another boilerplate?](#why)
 - [Features](#features)
 - [Usage](#usage)
-  - [Setup](#setup) 
+  - [Setup](#setup)
 - [Tech Docs](#tech)
 - [Credit](#credit)
 - [Contributing](#contributing)
 
 
 ## Intro <a name="intro"></a>
-This boilerplate is meant to be a minimal quick start for creating chrome extensions using React, Typescript and Tailwind CSS.
-
-Built for:
-> For improved DX and rapid building vite and nodemon are used.
-
-> Chrome does not accept manifest v2 extensions since Jan 2022, therefore this template uses manifest v3.
-
-> Firefox + other browsers don't yet support manifest v3, so cross browser usage is not encouraged.
+A chrome extension for youtube music
 
 * Read more about Chrome manifest v2 support [here](https://developer.chrome.com/docs/extensions/mv2/).
 * Read more about Firefox Manifest v3 support [here](https://discourse.mozilla.org/t/manifest-v3/94564).
 
 As soon as Firefox supports manifest v3, support will be added in this repo as well.
 
-Oh by the way ... I also implemented a chrome local/sync storage hook for react, which works well with this 
+Oh by the way ... I also implemented a chrome local/sync storage hook for react, which works well with this
 template. [Check it out here](https://gist.github.com/JohnBra/c81451ea7bc9e77f8021beb4f198ab96).
 
 ## Why another boilerplate? <a name="why"></a>
@@ -85,16 +75,16 @@ If you need to declare extra HTML pages beyond those the manifest accommodates, 
 
 This example includes a welcome page to open when the user installs the extension.
 
-CSS files in the `src/pages/*` directories are not necessary. They are left in there in case you want 
+CSS files in the `src/pages/*` directories are not necessary. They are left in there in case you want
 to use it in combination with Tailwind CSS. **Feel free to delete them**.
 
 Tailwind can be configured as usual in the `tailwind.config.cjs` file. See doc link below.
 
 ### Publish your extension
-To upload an extension to the Chrome store you have to pack (zip) it and then upload it to your item in entry 
+To upload an extension to the Chrome store you have to pack (zip) it and then upload it to your item in entry
 in the Chrome Web Store.
 
-This repo includes a Github Action Workflow to create a 
+This repo includes a Github Action Workflow to create a
 [optimized prod build and create the zip file](https://github.com/JohnBra/vite-web-extension/actions/workflows/ci.yml).
 
 To run the workflow do the following:
@@ -114,7 +104,7 @@ To run the workflow do the following:
 - [Tailwind CSS](https://tailwindcss.com/docs/configuration)
 
 # Credit <a name="credit"></a>
-Heavily inspired by [Jonghakseo's vite chrome extension boilerplate](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite). 
+Heavily inspired by [Jonghakseo's vite chrome extension boilerplate](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite).
 It uses SASS instead of TailwindCSS if you want to check it out.
 
 # Contributing <a name="contributing"></a>
